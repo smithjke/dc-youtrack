@@ -2,7 +2,7 @@ version: '3'
 
 services:
     youtrack:
-        image: jetbrains/youtrack
+        image: jetbrains/youtrack:2022.3.65372
         restart: unless-stopped
         volumes:
             - ./data:/opt/youtrack/data
