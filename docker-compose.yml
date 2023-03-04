@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    youtrack:
+        image: jetbrains/youtrack
+        restart: unless-stopped
+        volumes:
+            - ./data:/opt/youtrack/data
+            - ./conf:/opt/youtrack/conf
+            - ./logs:/opt/youtrack/logs
+            - ./back:/opt/youtrack/back
+        ports:
+            - 8099:8080
